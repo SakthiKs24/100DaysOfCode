@@ -1,0 +1,17 @@
+class Solution(object):
+    def containsDuplicate(self, nums):
+        duplicate = set()
+        for num in nums:
+            if num in duplicate:
+                return True
+            duplicate.add(num)
+        return False
+
+user_input = input("Enter numbers separated by space: ")
+
+nums = list(map(int, user_input.strip().split()))
+
+solution = Solution()
+result = solution.containsDuplicate(nums)
+
+print("Contains duplicate?" , result)
